@@ -26,6 +26,8 @@ then
     # Install latest stable version of MongoDB
     apt-get install -y mongodb-10gen
 
+    npm install express --save
+
     # Symlink our host www to the guest /var/www folder
     ln -s /vagrant/www /var/www
 
@@ -33,5 +35,5 @@ then
     echo "You're all done! Your default node server should now be listening on http://10.0.33.34/. For code, see: node-mongo-vagrant/www/default/server.js."
 
     # Run it
-    node /var/www/default/server.js
+    #node /var/www/default/server.js
 fi
